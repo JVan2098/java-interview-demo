@@ -8,6 +8,14 @@ package java.interview.demo;
  *
  * @author Jason Van Dyke
  */
-public class NewClass {
+public class CoffeeShop {
+    public int X;
+    public int Y;
+    public String shopName;
     
+    public CoffeeShop(int x, int y, String name){
+        X = x;
+        Y = y;
+        shopName = name;
+    };
 }
