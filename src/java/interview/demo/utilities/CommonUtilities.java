@@ -16,11 +16,11 @@ public class CommonUtilities {
         if (str == null) {
             return false;
         }
-        int length = str.length();
+        var length = str.length();
         if (length == 0) {
             return false;
         }
-        int i = 0;
+        var i = 0;
         if (str.charAt(0) == '-') {
             if (length == 1) {
                 return false;
@@ -28,7 +28,7 @@ public class CommonUtilities {
             i = 1;
         }
         for (; i < length; i++) {
-            char c = str.charAt(i);
+            var c = str.charAt(i);
             if (c < '0' || c > '9') {
                 return false;
             }
@@ -37,8 +37,8 @@ public class CommonUtilities {
     }
     
     public static int[] parseOrderedPair(String input) {
-        int[] tempCoords = new int[2];
-        String[] splitInput = input.split(",");
+        var tempCoords = new int[2];
+        var splitInput = input.split(",");
         splitInput[0] = splitInput[0].trim();
         splitInput[1] = splitInput[1].trim();
         tempCoords[0] = Integer.parseInt(splitInput[0]);
