@@ -12,8 +12,8 @@ import java.util.Scanner;
  */
 public class IOUtility {
     public static String getValidUserInput() {
-        String temporaryUserInput = "";
-        boolean validInput = false;
+        var temporaryUserInput = "";
+        var validInput = false;
         do {
             temporaryUserInput = getKeyboardInput();
             validInput = validateInput(temporaryUserInput);
@@ -26,9 +26,9 @@ public class IOUtility {
     }
 
     public static String getKeyboardInput() {
-        Scanner kb = new Scanner(System.in);
+        var kb = new Scanner(System.in);
         System.out.println("Enter an ordered coordinate pair, with both numbers between 0 and 10, inclusive.");
-        String userInput = kb.nextLine();
+        var userInput = kb.nextLine();
         return userInput;
     }
 
@@ -36,7 +36,7 @@ public class IOUtility {
         if (!isCorrectInputFormat(input)) {
             return false;
         }
-        String[] numberStrings = input.split(",");
+        var numberStrings = input.split(",");
         numberStrings[0] = numberStrings[0].trim();
         numberStrings[1] = numberStrings[1].trim();
         if (!isCorrectInputType(numberStrings)) {
