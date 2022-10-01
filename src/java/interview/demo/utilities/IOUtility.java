@@ -82,7 +82,7 @@ public class IOUtility {
                     return false;
                 }
             }
-        } catch (NumberFormatException e) {
+        } catch (NumberFormatException exception) {
             return false;
         }
         return true;
